@@ -1,3 +1,5 @@
+using WebRazor.Repository;
+
 namespace WebRazor
 {
     public class Program
@@ -8,6 +10,7 @@ namespace WebRazor
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddScoped<IUser,UserRepository>();
 
             var app = builder.Build();
 
